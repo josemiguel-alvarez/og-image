@@ -177,6 +177,10 @@ const imageLightOptions: DropdownOption[] = [
     text: "TypeScript",
     value: "https://cdn.jsdelivr.net/gh/remojansen/logo.ts@master/ts.svg",
   },
+  {
+    text: "CSS",
+    value: "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg",
+  },
 ];
 
 const imageDarkOptions: DropdownOption[] = [
