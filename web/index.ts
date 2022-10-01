@@ -229,7 +229,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
       newState.overrideUrl = state.overrideUrl;
     }
     if (newState.overrideUrl) {
-      timeout = window.setTimeout(() => setState({ overrideUrl: null }), 200);
+      timeout = window.setTimeout(() => setState({ overrideUrl: null }), 1000);
     }
 
     setState({ ...newState, loading: true });
@@ -285,10 +285,6 @@ const App = (_: any, state: AppState, setState: SetState) => {
                 val === "light" ? imageLightOptions : imageDarkOptions;
               let clone = [...images];
               clone[0] = options[selectedImageIndex].value;
-              console.log(
-                "🚀 ~ file: index.ts ~ line 279 ~ App ~ clone",
-                clone
-              );
               setLoadingState({ theme: val, images: clone });
             },
           }),
@@ -322,7 +318,6 @@ const App = (_: any, state: AppState, setState: SetState) => {
           input: H(TextInput, {
             value: text,
             oninput: (val: string) => {
-              console.log("oninput " + val);
               setLoadingState({ text: val, overrideUrl: url });
             },
           }),
